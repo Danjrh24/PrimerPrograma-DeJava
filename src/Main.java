@@ -14,21 +14,42 @@ public class Main {
                     3. Salir
                     """);
             eleccion = sc.nextInt();
-            if (eleccion == 1) {
-                System.out.println("Ingrese el grado Celcius");
-                float gradoCelcius = sc.nextFloat();
-                float farenheit = (float) ((gradoCelcius * 1.8) + 32);
-                System.out.printf(String.format("%.1f grados Celcius a Farenheit son %.1f ", gradoCelcius, farenheit));
-            } else if (eleccion == 2) {
-                System.out.println("Ingrese el grado Farenheit");
-                float gradoFarenheit = sc.nextFloat();
-                float celcius = (float) ((gradoFarenheit - 32) / 1.8);
-                System.out.printf(String.format("%.1f grados Farenheit a Celcius son %.1f ", gradoFarenheit, celcius));
-            } else if (eleccion == 3 ){
-                System.out.println("Gracias por utilizar la calculadora de grados!!");
-            } else {
-                System.out.println("Ingrese una eleccion valida");
+//            if (eleccion == 1) {
+//                System.out.println("Ingrese el grado Celcius");
+//                float gradoCelcius = sc.nextFloat();
+//                float farenheit = (float) ((gradoCelcius * 1.8) + 32);
+//                System.out.printf(String.format("%.1f grados Celcius a Farenheit son %.1f ", gradoCelcius, farenheit));
+//            } else if (eleccion == 2) {
+//                System.out.println("Ingrese el grado Farenheit");
+//                float gradoFarenheit = sc.nextFloat();
+//                float celcius = (float) ((gradoFarenheit - 32) / 1.8);
+//                System.out.printf(String.format("%.1f grados Farenheit a Celcius son %.1f ", gradoFarenheit, celcius));
+//            } else if (eleccion == 3 ){
+//                System.out.println("Gracias por utilizar la calculadora de grados!!");
+//            } else {
+//                System.out.println("Ingrese una eleccion valida");
+//            }
+            switch (eleccion){
+                case 1:
+                    System.out.println("Ingrese el grado Celcius");
+                    float gradoCelcius = sc.nextFloat();
+                    float farenheit = (float) ((gradoCelcius * 1.8) + 32);
+                    System.out.printf(String.format("%.1f grados Celcius a Farenheit son %.1f ", gradoCelcius, farenheit));
+                break;
+                case 2:
+                    System.out.println("Ingrese el grado Farenheit");
+                    float gradoFarenheit = sc.nextFloat();
+                    float celcius = (float) ((gradoFarenheit - 32) / 1.8);
+                    System.out.printf(String.format("%.1f grados Farenheit a Celcius son %.1f ", gradoFarenheit, celcius));
+                break;
+                case 3:
+                    System.out.println("Gracias por utilizar la calculadora de grados!!");
+                break;
+                default:
+                    System.out.println("Ingrese una eleccion valida");
+
             }
+
         }
         //Inicializacion de primera instancia de Persona
         Persona daniel = new Persona("Daniel Rodriguez", 18);
