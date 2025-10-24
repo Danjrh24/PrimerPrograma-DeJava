@@ -2,18 +2,20 @@ import java.util.Scanner;
 
 public class DesafioBanco {
     public static void main(String[] args) {
+        //declarando variables
         Scanner userInput = new Scanner(System.in);
-        System.out.println("""
-                
-                **********Bienvenido a Banco El Super************
-                Nombre del cliente: Bruce Wayne
-                Tipo de cuenta: Platino
-                Saldo disponible: 2699.99$
-                """);
+        String nombreDelCliente = "Bruce Wayne";
+        String tipoDeCuenta = "Platino";
         double saldoDeCuenta = 2699.99;
         boolean permanenciaDelUsuario = true;
         int eleccionDelUsuario;
+        //mostrando informacion de la cuenta
+        System.out.println("\n**********Bienvenido a Banco El Super************\n"+ "Nombre del cliente: " +
+                nombreDelCliente + "\n" + "Tipo de cuenta: " + tipoDeCuenta + "\n" + "Saldo disponible: " +
+                saldoDeCuenta + "$\n");
+        //estableciendo bucle de eleccion del usuario
         while (permanenciaDelUsuario) {
+            //mostrando menu de opciones al usuario
             System.out.println("""
                     *************************************************
                     ** Escriba el numero de la opcion deseada **
@@ -22,7 +24,9 @@ public class DesafioBanco {
                     3 - Depositar
                     9 - Salir
                     """);
+
             eleccionDelUsuario = userInput.nextInt();
+
             switch (eleccionDelUsuario){
                 case 1:
                     System.out.println("Su saldo actualizado es de " + saldoDeCuenta + "$");
